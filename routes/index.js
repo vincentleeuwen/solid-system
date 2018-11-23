@@ -16,9 +16,11 @@ router.get('/userlist', (req, res) => {
   const { db } = req;
   const collection = db.get('usercollection');
   collection.find({}, {}, (e, docs) => {
-      res.render('userlist', {
-          "userlist" : docs
-      });
+    // console.log(2222);
+    // console.log(docs);
+    res.render('userlist', {
+        "userlist" : docs
+    });
   });
 });
 
